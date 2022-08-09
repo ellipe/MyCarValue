@@ -5,6 +5,6 @@ export class Report {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column()
+  @Column('float')
   price: number;
 }
