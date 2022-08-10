@@ -1,0 +1,2 @@
+# Find User by email
+GET http://localhost:3000/auth?email=ellipe@gmail.com
