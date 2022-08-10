@@ -3,7 +3,7 @@ POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-  "email": "ellipe+bertel@gmail.com",
+  "email": "ellipe+bertel2@gmail.com",
   "password": "somepass"
 }
 
@@ -12,9 +12,15 @@ POST http://localhost:3000/auth/signin
 content-type: application/json
 
 {
-  "email": "ellipe+bertel@gmail.com",
-  "password": "somep22ass"
+  "email": "ellipe+bertel2@gmail.com",
+  "password": "somepass"
 }
 
-### Find User by email
-GET http://localhost:3000/auth?email=ellipe@gmail.com
+### Whoami
+GET http://localhost:3000/auth/whoami
+content-type: application/json
+
+
+### Sign out
+POST http://localhost:3000/auth/signout
+content-type: application/json
