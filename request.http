@@ -1,3 +1,5 @@
+
+# User Section
 ### Sign up
 POST http://localhost:3000/auth/signup
 content-type: application/json
@@ -24,3 +26,19 @@ content-type: application/json
 ### Sign out
 POST http://localhost:3000/auth/signout
 content-type: application/json
+
+
+# Reports Section
+### Create Report
+POST http://localhost:3000/reports
+content-type: application/json
+
+{
+  "make": "toyota",
+  "model": "corolla",
+  "year": 1986,
+  "mileage": 20000,
+  "lng": 0,
+  "lat": 0,
+  "price": 4500
+}
