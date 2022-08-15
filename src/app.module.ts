@@ -10,6 +10,7 @@ import { ValidationPipe } from '@nestjs/common';
 import { APP_PIPE } from '@nestjs/core';
 import * as session from 'express-session';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+// import { CurrentUserMiddleware } from './users/middleware/current-user.middleware';
 
 @Module({
   imports: [
@@ -49,6 +50,7 @@ export class AppModule implements NestModule {
             secure: process.env.NODE_ENV === 'production',
           },
         }),
+        // CurrentUserMiddleware, // this will chain it sequentially.
       )
       .forRoutes('*');
   }
