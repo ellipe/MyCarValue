@@ -26,6 +26,9 @@ export class ReportDto {
   @Expose()
   mileage: number;
 
+  @Expose()
+  approved: boolean;
+
   // Use this for exposing the User with custom exposed fields
   @Expose()
   @Type(() => UserDto)
