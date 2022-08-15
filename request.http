@@ -9,14 +9,6 @@ content-type: application/json
   "password": "somepass"
 }
 
-### Sign In
-POST http://localhost:3000/auth/signin
-content-type: application/json
-
-{
-  "email": "admin@gmail.com",
-  "password": "somepass"
-}
 
 ### Whoami
 GET http://localhost:3000/auth/whoami
@@ -34,20 +26,34 @@ POST http://localhost:3000/reports
 content-type: application/json
 
 {
-  "make": "toyota",
-  "model": "corolla",
-  "year": 1986,
+  "make": "ford",
+  "model": "mustang",
+  "year": 2000,
   "mileage": 20000,
   "lng": 0,
   "lat": 0,
-  "price": 4500
+  "price": 20000
 }
 
 ### Approve Report
-PATCH  http://localhost:3000/reports/5d8d75d2-b79d-4add-94d0-cdda6ce8afe0
+PATCH  http://localhost:3000/reports/7b459362-d840-4fa3-ba04-f7984772f7ad		
 content-type: application/json
 
 {
-  "approved": false
+  "approved": true
 }
+
+### Sign In
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+  "email": "admin@gmail.com",
+  "password": "somepass"
+}
+
+
+### Get Estimate Report
+GET  http://localhost:3000/reports?make=ford&model=mustang&year=2000&mileage=20000&lat=0&lng=0
+content-type: application/json
 
