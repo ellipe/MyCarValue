@@ -39,11 +39,12 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
   ],
 })
 export class AppModule implements NestModule {
+  constructor(private configService: ConfigService) {}
   configure(consumer: MiddlewareConsumer) {
     consumer
       .apply(
         session({
-          secret: 'somesecretkey',
+          secret: this.configService.get<string>('COOKIE'),
           resave: false,
           saveUninitialized: false,
           cookie: {
